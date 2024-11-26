@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Proyectos";
+}
+
+<div class="container">
+    <h1 class="display-5 text-center">Mis Proyectos</h1>
+    <div class="row mt-4 proyecto">
+        @foreach (var proyecto in Model)
+        {
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
+                <div class="card bg-dark text-white">
+                    <img src="@proyecto.ImagenUrl" class="card-img-top" alt="@proyecto.Titulo">
+                    <div class="card-body">
+                        <h5 class="card-title">@proyecto.Titulo</h5>
+                        <p class="card-text">@proyecto.Descripcion</p>
+                        <a href="@proyecto.LinkDemo" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

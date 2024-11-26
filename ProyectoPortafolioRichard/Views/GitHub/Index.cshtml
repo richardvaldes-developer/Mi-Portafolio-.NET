@@ -1,0 +1,25 @@
+﻿@model IEnumerable<ProyectoPortafolioRichard.Services.GitHubRepo>
+
+@{
+    ViewData["Title"] = "Proyectos en GitHub";
+}
+
+<h2>Mis Proyectos en GitHub DevRichardV</h2>
+
+<div class="container">
+    <div class="row">
+        @foreach (var repo in Model)
+        {
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">@repo.Name</h5>
+                        <p class="card-text">@repo.Description</p>
+                        <p class="card-text"><strong>Lenguaje:</strong> @repo.Language</p>
+                        <a href="@repo.HtmlUrl" class="btn btn-primary" target="_blank">Ver en GitHub</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

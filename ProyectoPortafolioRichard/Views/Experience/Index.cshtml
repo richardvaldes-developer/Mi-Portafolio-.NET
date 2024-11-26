@@ -1,0 +1,24 @@
+﻿@model IEnumerable<ProyectoPortafolioRichard.Models.Experience>
+
+@{
+    ViewData["Title"] = "Experiencia Laboral";
+}
+
+
+
+<div class="row" data-aos="fade-up" data-aos-duration="1000">
+    <h2 class="display-5 text-center">Experiencia Laboral </h2>
+    @foreach (var experiencia in Model)
+    {
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">@experiencia.Puesto</h4>
+                    <h5 class="card-subtitle mb-2 text-muted">@experiencia.Empresa</h5>
+                    <p class="card-text">@experiencia.Descripcion</p>
+                    <p class="text-muted"><small>@experiencia.Periodo</small></p>
+                </div>
+            </div>
+        </div>
+    }
+</div>

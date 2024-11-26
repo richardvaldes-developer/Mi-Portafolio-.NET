@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Contacto";
+}
+
+@model ProyectoPortafolioRichard.Models.Contact
+
+<h2>Contáctame</h2>
+
+@if (TempData["Mensaje"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Mensaje"]
+    </div>
+}
+
+<form asp-action="Enviar" method="post" data-aos="zoom-in" data-aos-duration="800">
+    <div class="form-group">
+        <label for="Nombre">Nombre</label>
+        <input type="text" class="form-control" id="Nombre" name="Nombre" value="@Model?.Nombre" required />
+    </div>
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="email" class="form-control" id="Email" name="Email" value="@Model?.Email" required />
+    </div>
+    <div class="form-group">
+        <label for="Mensaje">Mensaje</label>
+        <textarea class="form-control" id="Mensaje" name="Mensaje" rows="5" required>@Model?.Mensaje</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
