@@ -1,1 +1,2 @@
-![imagenreferencia](https://github.com/richardvaldes-developer/Mi-Portafolio-.NET/blob/master/portafolio-net.jpg)
+![imagenreferencia](https://github.com/richardvaldes-developer/Mi-Portafolio-.NET/blob/master/cover.png)
+![Mi Imagen](./cover.png)
